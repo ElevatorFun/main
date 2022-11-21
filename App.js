@@ -1,6 +1,13 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import './App.css';
+import { useState, useEffect } from 'react';
+//import { BrowserRouter } from 'react-router-dom'
+import axios from 'axios';
+import './index.css';
+//import Navbar from './Navbar';
+
+//import { useState, useEffect } from "react";
+//import axios from "axios";
+//import './App.css';
+
 function App() {
   let [quote_str, setQuoteStr] = useState(null);
   let [imageURL, setImageURL] = useState(null);
@@ -38,7 +45,7 @@ function App() {
     alert(punch)
   }
 
-  return (
+  /*return (
     <div ClassName="App">
         <p>{quote_str}</p>
         <button onClick={setQuote}>Quote</button>
@@ -47,6 +54,24 @@ function App() {
         <p>{joke}</p>
         <button onClick={setJoke}>Joke</button>
         <button onClick={response}>Answer</button>
+    </div>
+  );*/
+  return (
+    <div className="App">
+      <header>Elevator Fun</header>
+      <div class="quotes">
+        <p>{quote_str}</p>
+        <button onClick={setQuote}>Quote</button>
+      </div>
+      <div class="cats">
+        <img src={imageURL} alt="Pic" />
+        <button onClick={setImage}>Cat</button>
+      </div>
+      <div class="jokes">
+        <p>{joke}</p>
+        <button onClick={setJoke}>Joke</button>
+        <button onClick={response}>Answer</button>
+      </div>
     </div>
   );
 }
